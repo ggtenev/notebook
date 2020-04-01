@@ -11,9 +11,9 @@ import Colors from '../../constants/styles'
 
 export default function Available({ navigation }) {
 
-  // useEffect(() => {
-  //   Keyboard.dismiss()
-  // },[])
+  useEffect(() => {
+    Keyboard.dismiss()
+  },[])
 
   return (
     <ImageBackground

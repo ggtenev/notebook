@@ -21,7 +21,7 @@ export default function EnterPhone({ navigation }) {
   const [code, setCode] = useState("+44");
   const [phone, setPhone] = useState("");
   const [validNumber, setValidNumber] = useState("");
-  console.log(typeof Number(code + phone), code + phone);
+
 
   const signIn = async number => {
     if (phone.length < 5) {

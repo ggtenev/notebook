@@ -8,13 +8,14 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Colors from "../constants/styles";
 
 import HomeScreen from "../screens/Home";
-import NewMotive from "../screens/NewMotive";
+import NewMotive from "../screens/motives/NewMotive";
 import UserAccount from "../screens/UserAccount";
 import Welcome from '../screens/auth/Welcome'
 import EnterPhone from '../screens/auth/EnterPhone'
 import VerificationCode from '../screens/auth/VerificationCode'
 import SearchScreen from '../screens/SearchScreen'
 import Available from '../screens/auth/Available'
+import AddEvent from '../screens/motives/AddEvent'
 
 const defaultOptions = {
   title:'',
@@ -60,7 +61,8 @@ const MotiveStack = createStackNavigator(
   {
     Motive: {
       screen: NewMotive
-    }
+    },
+    AddEvent:AddEvent
   },
   {
     defaultNavigationOptions: defaultOptions
@@ -142,17 +144,31 @@ const TabNavigator = createBottomTabNavigator(
     },
   },
   {
+    defaultNavigationOptions:{
+      tabBarOnPress:({navigation,defaultHandler}) => {
+        if(navigation.state.key === 'Motive'){
+          navigation.navigate('motiveModal')
+        } else {
+          defaultHandler()
+        }
+      }
+    },
+
     tabBarOptions: {
       activeTintColor: Colors.main,
       showLabel:false
     }
   }
-);
+)
 const Switch = createSwitchNavigator({
   Welcome:Welcome,
   Auth:AuthStack,
-  Home:TabNavigator
+  Home:TabNavigator,
+  motiveModal:MotiveStack
 
+}, {
+  mode:'modal',
+  headerMode:'none'
 }) 
 
 

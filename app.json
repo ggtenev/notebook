@@ -1,7 +1,7 @@
 {
   "expo": {
     "androidStatusBar": {
-      "backgroundColor": "#00FFFFFF",
+      "backgroundColor": "#FFFFFF",
       "barStyle": "dark-content"
     },
     "name": "Blank Template",

@@ -21,7 +21,7 @@ export default function CardInfo({ likes, uri, minAway, name, title, song }) {
       <ImageBackground
         source={{
           uri:
-            "https://www.telegraph.co.uk/content/dam/news/2017/11/22/TELEMMGLPICT000147365976_trans_NvBQzQNjv4Bq3XmyF3YIL3K1caQxZsZv2Ssm-UOV8_Q90I8_c5Af0yY.jpeg"
+            "https://i.ytimg.com/vi/jzhDkdOqDb8/maxresdefault.jpg"
         }}
         style={{
           width: "100%",
@@ -43,7 +43,7 @@ export default function CardInfo({ likes, uri, minAway, name, title, song }) {
       </ImageBackground>
       <View style={styles.eventInfo}>
         <View style={styles.nameMin}>
-          <Text style={styles.name}>{name} Donald Duck</Text>
+          <Text style={styles.name}>{name} Yoda</Text>
           <View style={styles.rightMin}>
             <Entypo name='location-pin' size={18} color={Colors.text} />
             <Text style={styles.away}>{minAway}33 min away</Text>
@@ -51,7 +51,7 @@ export default function CardInfo({ likes, uri, minAway, name, title, song }) {
         </View>
         <View style={styles.eventTitle}>
           <Text style={styles.title}>
-            {title}It was the chinese and ther coronavirus blah blah blah...
+            {title}No! Try not! Do or do not, there is no try.
           </Text>
         </View>
         <View style={styles.chosenSong}>
